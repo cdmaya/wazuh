@@ -2,6 +2,7 @@
 
 # Prerequisites : -------------------------------------
 # apt install mosquitto-clients
+# check the "custom-mqtt.readme" file.
 #------------------------------------------------------
 
 # Read the temp alert file contents
