@@ -1,0 +1,4 @@
+# "custom-mqtt" shell script will forward Wazuh alerts to an MQTT broker and you can use a tool like nodered to prcoess the alert (json payload)
+# How to configure in Wazuh
+
+# 1) Create the custom-mqtt file in "/var/ossec/integrations" in the wazuh server
