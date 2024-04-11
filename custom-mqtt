@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# Prerequisites : -------------------------------------
+# apt install mosquitto-clients
+#------------------------------------------------------
+
+# Read the temp alert file contents
+alert=`cat $1`
+
+# MQTT details
+MQTT_USER=<your MQTT username>
+MQTT_PSWD=<your MQTT password>
+MQTT_HOST=<your MQTT servername or IP>
+MQTT_PORT=<your MQTT port>
+
+mosquitto_pub --topic <your MQTT Topic> -u $MQTT_USER -P $MQTT_PSWD -h $MQTT_HOST -p $MQTT_PORT -m "$alert"
+
+# Example : -
+# mosquitto_pub --topic wazuh/alerts -u $MQTT_USER -P $MQTT_PSWD -h $MQTT_HOST -p $MQTT_PORT -m "$alert"
+
